@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;700&family=Open+Sans&display=swap"
     rel="stylesheet">
 
-    <!-- Fontawesome -->
+  <!-- Fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,14 +21,25 @@
 <body>
 
   <!-- Header Section -->
-  <header class="bg-black py-12 text-gega-grey font-gemunu uppercase">
-    <div class="container flex items-center justify-between space-x-16">
+  <header class="bg-black py-6 lg:py-12 text-gega-grey uppercase">
+    <div class="container flex items-center justify-between space-x-8 lg:space-x-16">
       <!-- Logo -->
-      <a href="#" class="text-6xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-gega-red to-gega-grey">GEGA</a>
+      <a href="#"
+        class="pl-4 md:pl-0 text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-gega-red to-gega-grey">GEGA</a>
+
+      <!-- Mobile Menu -->
+      <div class="block md:hidden pr-4">
+        <div class="space-y-1 cursor-pointer">
+          <div class="bg-gega-grey w-8 h-1 rounded-full"></div>
+          <div class="bg-gega-grey w-8 h-1 rounded-full"></div>
+          <div class="bg-gega-grey w-8 h-1 rounded-full"></div>
+        </div>
+      </div>
+
       <!-- Navigation -->
-      <nav class="flex justify-between flex-1">
+      <nav class="hidden md:flex justify-between flex-1">
         <!-- Menu -->
-        <div class="flex items-center text-lg space-x-8">
+        <div class="flex items-center lg:text-lg space-x-4 lg:space-x-8">
           <a href="#" class="hover:text-gega-melon transition duration-500">movies</a>
           <a href="#" class="hover:text-gega-melon transition duration-500">celebrities</a>
           <a href="#" class="hover:text-gega-melon transition duration-500">blog</a>
@@ -36,24 +47,78 @@
           <a href="#" class="hover:text-gega-melon transition duration-500">about</a>
         </div>
         <!-- Login Area -->
-        <div class="flex items-center space-x-8">
+        <div class="flex items-center space-x-4 lg:space-x-8">
           <!-- Search Area -->
           <form>
             <div class="group border-r px-4 mx-4 py-1 border-gega-red">
-              <input type="text" class="opacity-0 group-hover:opacity-100 bg-transparent border-b border-gega-red focus:outline-none w-44 transition duration-500">
-              <button class="-ml-4 group-hover:ml-0 transition duration-500"><i class="fas fa-search group-hover:text-gega-red transition duration-500"></i></button>
+              <input type="text"
+                class="opacity-0 group-hover:opacity-100 bg-transparent border-b border-gega-red focus:outline-none w-24 lg:w-44 transition duration-500">
+              <button class="-ml-4 group-hover:ml-0 transition duration-500"><i
+                  class="fas fa-search group-hover:text-gega-red transition duration-500"></i></button>
             </div>
           </form>
           <!-- Sigup Area -->
-          <div class="flex items-center space-x-8 text-lg">
+          <div class="flex items-center space-x-4 lg:space-x-8 lg:text-lg">
             <a href="#">Login</a>
-            <a href="#" class="bg-gega-red px-3 py-1 hover:bg-rose-600 hover:text-gega-grey cursor-pointer transition duration-500">Sign Up</a>
+            <a href="#"
+              class="bg-gega-red px-3 py-1 hover:bg-rose-600 hover:text-gega-grey cursor-pointer transition duration-500 whitespace-nowrap">Sign
+              Up</a>
           </div>
         </div>
       </nav>
     </div>
   </header>
 
+  <!-- Hero Section -->
+  <section class="h-64 md:h-96 lg:h-128 group relative">
+    <!-- Hero Image -->
+    <img src="./images/batman.jpg" alt="Main Image" class="h-full w-full object-cover">
+
+    <!-- Hero Content -->
+    <div class="absolute bottom-0 w-full bg-gradient-to-b from-transparent to-black">
+      <!-- Hero Content Container -->
+      <div class="container pl-10 lg:pl-0">
+        <h3 class="text-gega-melon tracking-wider group-hover:mb-1 duration-500">
+          Action, Darama, Thriller
+        </h3>
+        <h1 class="text-4xl lg:text-6xl text-gega-grey group-hover:mb-1 duration-500">
+          The Dark Knight
+        </h1>
+        <p class="text-gega-grey group-hover:mb-2 duration-500 text-sm lg:text-base w-3/4 lg:w-2/3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, recusandae impedit! Molestiae, quas rerum!
+          Similique quam temporibus excepturi dolore labore!
+        </p>
+
+        <!-- Detail Container -->
+        <div class="flex space-x-8 opacity-0 group-hover:opacity-100 group-hover:mb-10 lg:group-hover:mb-20 duration-1000">
+          <!-- Watch -->
+          <div class="flex space-x-2 items-center cursor-pointer">
+            <a href="#" class="text-gega-grey uppercase lg:text-lg hover:text-gega-red duration-500">Watch Trailer</a>
+            <div class="flex h-8 w-8 rounded-full text-center justify-center items-center bg-gega-red text-gega-grey">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+
+          <!-- INFO -->
+          <div class="flex space-x-2 items-center cursor-pointer">
+            <a href="#" class="text-gega-grey uppercase lg:text-lg hover:text-gega-red duration-500">Full Synopsis</a>
+            <div class="flex h-8 w-8 rounded-full text-center justify-center items-center bg-gega-red text-gega-grey">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Points -->
+    <div class="flex space-x-3 absolute bottom-5 left-10 opacity-0 group-hover:opacity-100 duration-1000">
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-gega-grey"></div>
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-gega-red"></div>
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-gega-grey"></div>
+      <div class="w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-gega-grey"></div>
+    </div>
+  </section>
 </body>
 
 </html>
